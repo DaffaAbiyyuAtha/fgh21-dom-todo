@@ -10,10 +10,8 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #1a1c28;
-  padding-left: 30px;
-  padding-right: 30px;
   border-radius: 15px;
 }
 .content {
@@ -24,6 +22,8 @@ body {
   font-weight: 400;
   letter-spacing: 1px;
   color: #c7cad3;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .edit-title {
   width: 100%;
@@ -35,59 +35,71 @@ body {
   background-color: #1a1c28;
 }
 .subtitle {
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 16;
   color: #1a1c28;
   background-color: transparent;
 }
 .text-completed {
+  padding-left: 30px;
+  padding-right: 30px;
   color: #469de0;
   letter-spacing: 1px;
   text-align: end;
   margin-bottom: 40px;
 }
-form {
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-.label {
+.container > .content > .list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.agenda {
-  display: flex;
-  gap: 18px;
-}
-.name-agenda {
-  color: #c7cad3;
-}
-.name {
-  color: #c7cad3;
-}
-.time {
-  color: #7a7d86;
-  padding-left: 38px;
-}
-.input-write {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+
+.container > .content > .list > .li {
   width: 100%;
-  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  box-sizing: border-box;
 }
-#btn {
-  height: 40px;
-  width: 30px;
+
+.container > .content > .list > .li input {
+  width: 20px;
+  height: 20px;
+}
+
+.container > .content > .list > .li label {
+  padding: 0 40px;
+  flex: 1;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  gap: 10px;
+}
+.container > .content > .list > .li label span:first-child {
+  color: #d7dae3;
+}
+.container > .content > .list > .li label span:last-child {
+  color: #646770;
+}
+.container > .content > .button-input {
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  height: 50px;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.container > .content > .button-input > button {
   background-color: transparent;
   border: none;
 }
-#name {
-  height: 40px;
-  width: 100%;
+.container > .content > .button-input > input {
   background-color: transparent;
+  width: 100%;
   border: none;
-  padding-left: 5px;
-  color: #7a7d86;
+  padding-left: 35px;
+  color: #d7dae3;
 }

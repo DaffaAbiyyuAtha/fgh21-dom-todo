@@ -5,34 +5,37 @@ const data = [
     time: new Date().getTime(),
     cek: true,
   },
+  {
+    agenda: "minum",
+    time: new Date().getTime(),
+    cek: true,
+  },
+  {
+    agenda: "tidur",
+    time: new Date().getTime(),
+    cek: true,
+  },
 ];
-data.forEach((event) => {
-  //   const inputWrite = event.target.name.value;
-  const label = document.createElement("label");
-  label.className = "label";
-  label.htmlFor = "num1";
-
+const ul = document.getElementsByClassName("list").item(0);
+data.forEach((event, index) => {
+  const li = document.createElement("li");
+  li.setAttribute("class", "li");
   const span1 = document.createElement("span");
-  span1.className = "agenda";
-
+  span1.textContent = event.agenda;
+  const span2 = document.createElement("span");
+  const hours = new Date(event.time).getHours();
+  const minute = new Date(event.time).getMinutes();
+  span2.textContent = hours + ":" + minute;
+  const label = document.createElement("label");
+  label.setAttribute("for", "list" + `${index + 1}`);
   const input = document.createElement("input");
   input.setAttribute("type", "checkbox");
-  input.setAttribute("id", "num1");
-  input.setAttribute("name", "name-agenda");
-
-  const span2 = document.createElement("span");
-  span2.className = "name-agenda";
-  span2.htmlFor = "num1";
-  span2.innerHTML = agenda;
-
-  const span3 = document.createAttribute("span");
-  span3.className = "time";
-  span2.innerHTML = time;
-
-  label.appendChild("span1");
-  label.appendChild("span3");
-  span1.appendChild("input");
-  span1.appendChild("span3");
-  form.appendChild("label");
-  console.log(form);
+  input.setAttribute("name", "agenda");
+  input.setAttribute("id", "list" + `${index + 1}`);
+  label.appendChild(span1);
+  label.appendChild(span2);
+  li.appendChild(input);
+  li.appendChild(label);
+  ul.appendChild(li);
 });
+console.log(ul);
