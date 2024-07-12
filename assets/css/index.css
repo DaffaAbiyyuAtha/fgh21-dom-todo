@@ -84,7 +84,7 @@ body {
 .container > .content > .list > .li label span:last-child {
   color: #646770;
 }
-.container > .content > .button-input {
+.container > .content > form > .button-input {
   padding-left: 35px;
   padding-right: 35px;
   display: flex;
@@ -92,11 +92,11 @@ body {
   padding-top: 50px;
   margin-bottom: 30px;
 }
-.container > .content > .button-input > button {
+.container > .content > form > .button-input > button {
   background-color: transparent;
   border: none;
 }
-.container > .content > .button-input > input {
+.container > .content > form > .button-input > input {
   background-color: transparent;
   width: 100%;
   border: none;
