@@ -103,3 +103,43 @@ body {
   padding-left: 35px;
   color: #d7dae3;
 }
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c7cad324;
+  position: absolute;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1c28;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  justify-content: center;
+  border-radius: 17px;
+}
+.popup-massage {
+  color: #c7cad3;
+  font-size: 28;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.btn-ok {
+  height: 36px;
+  width: 120px;
+  background-color: #2e2c42;
+  border: none;
+  border-radius: 6px;
+  color: #c7cad3;
+}
+.hide {
+  display: none;
+}

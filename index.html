@@ -10,7 +10,7 @@
       <div class="content">
         <div class="edit-title">
           <div class="title">Todo</div>
-          <div class="subtitle">
+          <div class="subtitle" id="remove">
             <img src="/assets/img/write.svg" alt="" />
           </div>
         </div>
@@ -26,9 +26,18 @@
               name="write"
               id="button-write"
               placeholder="Write new task..."
+              autofocus
             />
           </label>
         </form>
+      </div>
+    </div>
+    <div class="pop-up hide" id="popupid">
+      <div class="popup">
+        <div class="popup-massage">Have a Nice Day</div>
+        <div class="buttton-popup">
+          <input type="button" id="popup" class="btn-ok" value="ok" autofocus />
+        </div>
       </div>
     </div>
     <script src="/assets/js/index.js"></script>

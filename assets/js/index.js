@@ -1,4 +1,7 @@
 const form = document.getElementById("form");
+const btn = document.getElementById("popup");
+const popUp = document.getElementById("popupid");
+const removeData = document.getElementById("remove");
 let data = [
   {
     agenda: "makan",
@@ -10,8 +13,11 @@ const datas = localStorage.getItem("datas");
 if (datas !== null) {
   data = JSON.parse(datas);
 }
+
+// popUp.setAttribute("style", "display : block");
 const ul = document.getElementsByClassName("list").item(0);
 function getData() {
+  ul.innerHTML = "";
   data.forEach((event, index) => {
     const li = document.createElement("li");
     li.setAttribute("class", "li");
@@ -39,12 +45,25 @@ form.addEventListener("submit", (event) => {
   ul.innerHTML = "";
   event.preventDefault();
   const write = event.target.write.value;
-  data.push({
-    agenda: write,
-    time: new Date().getTime(),
-    cek: false,
-  });
-  window.localStorage.setItem("datas", JSON.stringify(data));
+  if (write === "") {
+    window.alert("You must fill the write text!");
+  } else {
+    data.push({
+      agenda: write,
+      time: new Date().getTime(),
+      cek: false,
+    });
+    window.localStorage.setItem("datas", JSON.stringify(data));
+  }
   getData();
+  popUp.classList.toggle("hide");
   form.reset();
+});
+popUp.addEventListener("click", () => {
+  popUp.classList.toggle("hide");
+});
+removeData.addEventListener("click", () => {
+  localStorage.removeItem("datas");
+  data = [];
+  getData();
 });
